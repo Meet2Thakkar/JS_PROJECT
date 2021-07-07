@@ -8,8 +8,10 @@ const newQuoteButton = document.getElementById("new-quote");
 const loader = document.getElementById("loader")
 
 function loading() {
+    if (loader.hidden){
     loader.hidden = false;
     quoteContainer.hidden = true;
+    }
 }
 
 function complete() {
@@ -22,8 +24,8 @@ function complete() {
 
 
 async function getQuote() {
-    const url = "http://api.quotable.io/random";
     loading();
+    const url = "http://api.quotable.io/random";
     try{
         const r = await fetch(url);
         const data = await r.json();
