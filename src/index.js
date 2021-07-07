@@ -8,10 +8,8 @@ const newQuoteButton = document.getElementById("new-quote");
 const loader = document.getElementById("loader")
 
 function loading() {
-    if (loader.hidden){
     loader.hidden = false;
     quoteContainer.hidden = true;
-    }
 }
 
 function complete() {
